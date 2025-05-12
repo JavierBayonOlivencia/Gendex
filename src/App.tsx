@@ -1,6 +1,6 @@
 import './App.css'
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Loader from './Loader';
@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Suspense fallback={<Loader />} >
         <Routes>
@@ -26,7 +26,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
-    </BrowserRouter>
+    </>
   )
 }
 
